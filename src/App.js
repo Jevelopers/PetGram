@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { GlobalStyle } from './style/GlobalStyle ';
+import { ListOfCategories } from './components/ListOfCategories';
+import { ListOfPhotoCard } from './components/ListOfPhotoCard';
+import { Logotipo } from './components/Logotipo';
 
 function App() {
   return (
     <div className="App">
+      <GlobalStyle />
+      <Logotipo />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <ListOfCategories />
       </header>
+      <main className='App-main'>
+        <ListOfPhotoCard />
+      </main>
     </div>
   );
 }
